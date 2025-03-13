@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvSobreApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sobre La App"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvDescripcionApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSobreApp"
+        android:text="Nuestra aplicación de noticias te mantiene informado..."
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescripcionApp"
+        android:text="Contáctanos: contacto@news.com"
+        android:paddingTop="16dp"
+        android:textStyle="bold" />
+</RelativeLayout>
