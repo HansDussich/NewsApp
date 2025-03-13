@@ -25,4 +25,6 @@
         android:layout_below="@id/imgNoticia"
         android:text="Contenido de la noticia aquí..."
         android:padding="16dp" />
+
+    <include layout="@layout/navegacion" />
 </RelativeLayout>
