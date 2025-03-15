@@ -32,10 +32,14 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
+    implementation(libs.swiperefreshlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Agregar CardView correctamente en Kotlin DSL
+    implementation("androidx.cardview:cardview:1.0.0")
 }
+

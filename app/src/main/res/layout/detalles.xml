@@ -1,30 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvTituloNoticia"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="16dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/imgNoticia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/search"
+                app:title=""
+                app:titleTextColor="@android:color/white" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+
+            <TextView
+                android:id="@+id/tvTituloNoticia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="How Social Security Cuts Could Impact Benefit Payments"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCategoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Política"
+                    app:chipBackgroundColor="@color/emerald_500"
+                    app:chipIcon="@drawable/search"
+                    app:chipIconTint="@android:color/white"
+                    app:chipStrokeWidth="0dp"
+                    app:chipSurfaceColor="@android:color/transparent"
+                    app:chipIconSize="16dp"
+                    app:chipStartPadding="8dp"
+                    app:chipEndPadding="8dp" />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvFechaNoticia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="14 Mar 2025"
+                    android:textColor="#777777"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAutorNoticia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Por: Newsweek"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvContenidoNoticia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4sp"
+                android:text="Social Security has become a hot topic in recent weeks as the Trump administration continues its overhaul of the federal agency responsible for paying benefits to tens of millions of people every month.
+                \n\nIn February, the federal government's Office of Personnel Management advised federal government agencies, including the Social Security Administration (SSA), to submit reorganization plans by March 13 and prepare for reductions in force. The SSA has also announced a number of changes to its operations, including the closure of field offices and internal departments.
+                \n\nThe changes have sparked concerns about the future of benefit payments, as prominent former workers at the SSA and lawmakers warn that the system, which paid out $1.5 trillion in benefits in 2024, could collapse without the staff to make it function
+                \n\nUltimately, you're going to see the system collapse."
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:autoLink="web"
+                android:text="Fuente: https://www.newsweek.com/ssa-social-security-doge-cuts-layoffs-benefits-delays-2042875"
+                android:textColorLink="@color/emerald_500"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCompartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="News"
-        android:textSize="24sp"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:src="@drawable/favorite"
+        app:layout_anchor="@id/appbar_detail"
+        app:layout_anchorGravity="bottom|end"
+        app:tint="@android:color/white" />
 
-    <ImageView
-        android:id="@+id/imgNoticia"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/tvTituloNoticia"
-        android:scaleType="centerCrop" />
-
-    <TextView
-        android:id="@+id/tvContenidoNoticia"
-        android:layout_width="match_parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFavorito"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imgNoticia"
-        android:text="Contenido de la noticia aquí..."
-        android:padding="16dp" />
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/favorite"
+        app:layout_anchor="@id/appbar_detail"
+        app:layout_anchorGravity="bottom|end"
+        app:tint="@android:color/white" />
 
-    <include layout="@layout/navegacion" />
-</RelativeLayout>
+    <include layout="@layout/navegacion"></include>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

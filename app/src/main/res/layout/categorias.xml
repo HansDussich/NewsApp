@@ -1,22 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
 
-    <TextView
-        android:id="@+id/tvCategorias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Categorias"
-        android:textSize="24sp"
-        android:layout_margin="16dp" />
-
-    <ListView
-        android:id="@+id/listViewCategorias"
+    <!-- Botones de Categorías -->
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvCategorias" />
+        android:padding="8dp"
+        android:background="#EEEEEE">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPolitica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Política"
+                android:backgroundTint="@color/emerald_500"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/btnDeportes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deportes"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/btnNegocios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Negocios"
+                android:backgroundTint="@color/design_default_color_error"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/btnTecnologia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tecnología"
+                android:backgroundTint="@color/material_on_surface_disabled"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Lista de Noticias -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerNoticias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:layout_marginBottom="60dp" />
+
+    <!-- Barra de navegación -->
     <include layout="@layout/navegacion" />
-</RelativeLayout>
+
+</LinearLayout>

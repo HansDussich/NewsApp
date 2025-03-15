@@ -1,0 +1,8 @@
+<!-- En res/drawable/bg_circle.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F1F1F1"/>
+    <corners android:radius="48dp"/>
+    <size android:width="96dp" android:height="96dp"/>
+</shape>
+
+    <!-- Iconos requeridos (ic_profile_placeholder, ic_history, ic_settings) -->

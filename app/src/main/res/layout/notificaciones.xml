@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificaciones"
+        android:textSize="24sp"
+        android:textColor="#1A1A1A"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Configuración general -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Activar notificaciones"
+            android:textSize="16sp"
+            android:textColor="#333333"/>
+
+        <Switch
+            android:id="@+id/switchGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="#007BFF"
+            android:trackTint="#E0E0E0"/>
+    </LinearLayout>
+
+    <!-- Categorías -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categorías"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Política -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Noticias de Política"
+            android:textSize="16sp"
+            android:textColor="#666666"/>
+
+        <Switch
+            android:id="@+id/switchPolitics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="#007BFF"
+            android:trackTint="#E0E0E0"/>
+    </LinearLayout>
+
+    <!-- Tecnología -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Noticias de Tecnología"
+            android:textSize="16sp"
+            android:textColor="#666666"/>
+
+        <Switch
+            android:id="@+id/switchTech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="#007BFF"
+            android:trackTint="#E0E0E0"/>
+    </LinearLayout>
+
+    <!-- Deportes -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Noticias de Deportes"
+            android:textSize="16sp"
+            android:textColor="#666666"/>
+
+        <Switch
+            android:id="@+id/switchSports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="#007BFF"
+            android:trackTint="#E0E0E0"/>
+    </LinearLayout>
+
+    <!-- Historial de notificaciones -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historial reciente"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="12dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:overScrollMode="never"/>
+
+</LinearLayout>
