@@ -121,7 +121,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="Búsquedas populares"
-                android:textColor="@color/purple_500"
+                android:textColor="@color/emerald_500"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -167,7 +167,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="8dp"
                 android:text="Búsquedas recientes"
-                android:textColor="@color/purple_500"
+                android:textColor="@color/emerald_500"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -185,7 +185,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Limpiar historial"
                 android:textAllCaps="false"
-                android:textColor="@color/purple_500" />
+                android:textColor="@color/emerald_500" />
         </LinearLayout>
     </FrameLayout>
 
