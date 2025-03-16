@@ -2,7 +2,9 @@
 
 ## Vistas
 * Pagina Principal: ![image](https://github.com/user-attachments/assets/a519545e-6e65-4bc2-b1aa-0564ea213ebf)
+  -----
 * Inicio de sesion: ![image](https://github.com/user-attachments/assets/0e4bbe4f-0d18-4452-ad5a-0c5fb38a6228)
+  -----
 * Registrarse: ![image](https://github.com/user-attachments/assets/7b6e4e1f-62bb-485a-9b10-cc1e7a8193e5)
 * Olvidaste tu contraseña: ![image](https://github.com/user-attachments/assets/269759b6-765d-4bc2-8e8a-754771bffa2b)
 * Barra de navegacion: ![image](https://github.com/user-attachments/assets/80c283b9-ab76-454f-8cee-ec9d9d50e649)
